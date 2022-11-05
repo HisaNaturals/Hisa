@@ -1,3 +1,4 @@
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -79,95 +80,166 @@ button.white {
 }
 
 body {
- max-width: 1100px;
- min-width: 80%;
- background: #cce7d0;
+ max-width: 1500px;
+ width: 100%;
+ 
  margin: auto;
 }
 
 /*--- Header Start ---*/
 
-#header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 80px;
-  background: transparent;
-  box-shadow: 0 5px 5px rgba(43, 39, 34, 0.6);
-  position: sticky;
-  top: 0;
-  left: 0; 
-  
-  background-position: center;
-  background-size: cover;
- z-index: 1;
-   
+
+ .navigation {
+     height: 60px;
+     background: linear-gradient(360deg, #01410a, #2aa209, #0d3400);
+     
+     width: 100%;
+     z-index: 9999;
 }
-#header img{
-   width: 100px;
-}
-#navbar{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), #009688;
-   border-radius: 10px;
-   padding: 5px;
-   
-}
-#navbar li{
-   list-style: none;
-   margin: 0 20px;
-}
-#navbar li a{
- text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.4s;
-  position: relative;
-}
-#navbar li a:hover,
-#navbar li a.active {
-  color: orange;
-}
-#navbar li a.active::after,
-#navbar li a:hover::after {
-  content: "";
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  bottom: -5px;
-  left: 0px;
-  background: orange;
-}
- #navbar .sub-menu{
-   display: flex;
-   flex-direction: column-reverse;
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  align-items: flex-start;
-  padding: 5px 0 5px 0;
-  transition: 0.5s;  
-   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), #009688;
-   border-radius: 5px;
-   margin-top: 5px;
-}
- #navbar li:hover .sub-menu{
- opacity: 1;
- pointer-events: auto;
-}
-#navbar .sub-menu li{
-  padding: 10px;
-}
-#close{
-  display: none;
-}
-#mobile{
-  display: none;
+ .brand {
+      position: absolute;  
+     padding-left: 20px;
+    
 }
 
+.brand img{
+    width: 60px;
+}
+ .nav-container {
+     max-width: 1200px;
+     margin: 0 auto;
+    
+}
+ nav {
+     float: right;
+  
+}
+ nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+ nav ul li {
+     float: left;
+     position: relative; 
+}
+ nav ul li a,nav ul li a:visited {
+     display: block;
+     padding: 0 20px;
+     line-height: 60px;
+     color: #fff;
+     background: #262626 ;
+     text-decoration: none;
+     font-size: 1.2rem;
+}
+ nav ul li a{
+     background: transparent;
+     color: #FFF;
+}
+ nav ul li a:hover, nav ul li a:visited:hover {
+     background: rgb(1, 160, 1);
+     color: #ffffff;
+}
+ .navbar-dropdown li a{
+     background: green;
+}
+ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+     padding-left: 4px;
+     content: ' \025BE';
+}
+ nav ul li ul li {
+     min-width: 180px;
+}
+ nav ul li ul li a {
+     padding: 15px;
+     line-height: 20px;
+}
+ .navbar-dropdown {
+     position: absolute;
+     display: none;
+     z-index: 1;
+     background: #fff;
+     box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
+}
+/* Mobile navigation */
+ .nav-mobile {
+     display: none;
+     position: absolute;
+     top: 0;
+     right: 0;
+     background: transparent;
+     height: 55px;
+     width: 70px;
+}
+ @media only screen and (max-width: 800px) {
+     .nav-mobile {
+         display: block;
+    }
+     nav {
+         width: 100%;
+         padding: 55px 0 15px;
+    }
+     nav ul {
+         display: none;
+    }
+     nav ul li {
+         float: none;
+    }
+     nav ul li a {
+         padding: 15px;
+         line-height: 20px;
+         background: #262626;
+         font-size: 18px;
+    }
+     nav ul li ul li a {
+         padding-left: 30px;
+    }
+     .navbar-dropdown {
+         position: static;
+}
+ @media screen and (min-width:800px) {
+     .nav-list {
+         display: block !important;
+    }
+}
+ #navbar-toggle {
+     position: absolute;
+     left: 18px;
+     top: 15px;
+     cursor: pointer;
+     padding: 10px 35px 16px 0px;
+}
+ #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
+     cursor: pointer;
+     border-radius: 1px;
+     height: 3px;
+     width: 30px;
+     background: #ffffff;
+     position: absolute;
+     display: block;
+     content: '';
+     transition: all 300ms ease-in-out;
+}
+ #navbar-toggle span:before {
+     top: -10px;
+}
+ #navbar-toggle span:after {
+     bottom: -10px;
+}
+ #navbar-toggle.active span {
+     background-color: transparent;
+}
+ #navbar-toggle.active span:before, #navbar-toggle.active span:after {
+     top: 0;
+}
+ #navbar-toggle.active span:before {
+     transform: rotate(45deg);
+}
+ #navbar-toggle.active span:after {
+     transform: rotate(-45deg);
+}
+ }
+ 
 
 
 /* Home Page */
@@ -577,7 +649,7 @@ body {
  background: transparent;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  width: 80%;
 }
 .dish-details{
   padding: 20px;
@@ -634,7 +706,7 @@ body {
   display: flex;
   flex-wrap: wrap;
    width: 100%;
-   height: auto;
+   min-height: 30vh;
   background-image: url(img/banner/b14.jpg);
   background-position: center;
   justify-content: space-around;
@@ -695,6 +767,7 @@ body {
   cursor: pointer;
   color: #fff;
   white-space: no wrap;
+
 }
 
 /*------ Footer ------*/
@@ -834,38 +907,28 @@ transform: translateY(-5px);
 #myBtn {
   display: block; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 100px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #009688; /* Set a background color */
+ 
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 20px; /* Rounded corners */
+  
+  background-color: transparent;
   font-size: 18px; /* Increase font size */
 }
 
-#myBtn:hover {
-  background-color: greenyellow; /* Add a dark-grey background on hover */
+#myBtn img{
+  width: 50px;
 }
-
-
-
-
-
-
-
-
 
 
 
 
 @media (max-width:999px){
-  html{
-    font-size: 40%;
-  }
+ 
   #navbar{
    display: flex;
    flex-direction: column;   
@@ -950,14 +1013,17 @@ transform: translateY(-5px);
 #newsletter .form {
  
   width: 70%;
+  margin-bottom: 2rem;
 }
+
 
 }
 
 
 @media (max-width:499px){
-html{
-  font-size: 20%;
+body{
+  width: 100%;
+  margin: auto;
 }
 #header{
 padding: 10px 10px;
@@ -1073,7 +1139,7 @@ padding: 10px 10px;
 
 #product-range h3{
   max-width: 100%;
-  width: 100%;
+  width: 80%;
   margin: 0;
   padding: 20px 0px;
   text-align: center;
@@ -1159,25 +1225,26 @@ padding: 10px 10px;
 /*--- Newsletter ---*/
 
 #newsletter{
-  min-height: 50vh;
+  width: 100%;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
  
 }
 #newsletter .form { 
-  width: 100%;
+  width: 90%;
   align-items: center;
   justify-content: center;
   margin-left: 0px;
 }
 #newsletter .form .placeholder {
-  width: 150px;
-  height: 10vh;
+  width: 60%;
+  height: 8vh;
  
 }
 #newsletter .form .signup {
-  width: fit-content;
-  height: 10vh;
+  width: 40%;
+  height: 8vh;
   padding: 0 20px ;
 
 }

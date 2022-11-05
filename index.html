@@ -6,57 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HISA 09.08.2022</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     />
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-    </style>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+   
   </head>
   <body>
-    <section id="header">
-      <a href="index.html"
-        ><img src="images/Hisa-logo.png" alt="Hisa-logo"
-      /></a>
-      <marquee behavior="" direction=""
-        >Welcome to the official website of Hisa Naturals</marquee
-      >
-      
-        <ul id="navbar">
-          <a href="#" id="close"><i class="far fa-window-close"></i></a>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about-us.html">AboutUs</a></li>
-          <li>
-            <a href="products.html">Products</a>
-            <div class="sub-menu">
-              <ul>
-                <li><a href="spices.html">Spices</a></li>
-                <li><a href="oils.html">Oils</a></li>
-                <li><a href="rice.html">Rice</a></li>
-                <li><a href="dates.html">Dates</a></li>
-                <li><a href="millets.html">Millets</a></li>
-                <li><a href="flours.html">Flours</a></li>
-                <li><a href="jaggery.html">Jaggery</a></li>
-                <li><a href="dryfruits.html">Dry Fruits</a></li>
-                <li><a href="health-foods.html">Health Foods</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="buy-now.html"><i class="fas fa-shopping-bag"></i></a>
-          </li>
-        </ul>
-      
-        <div id="mobile">
-          <i id="bar" class="fas fa-bars"></i>
-        </div>
+    <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+       <a href="index.html"><img src="images/Hisa-logo.png" alt=""></a>
       </div>
-    </section>
+      <nav>
+        <div class="nav-mobile"><a id="navbar-toggle"   href="#!"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="#!">Products</a>
+            <ul class="navbar-dropdown">            
+              <li><a href="jaggery.html">Organic Jaggery</a></li>
+              <li><a href="millets.html">Organic Millets</a></li>
+              <li><a href="oils.html">Organic Oils</a></li>
+              <li><a href="rice.html">Organic Rice</a></li>
+              <li><a href="flours.html">Organic Flours</a></li>
+              <li><a href="spices.html">Organic spices</a></li>           
+              <li><a href="dates.html">Organic Dates</a></li>
+              <li><a href="health-foods.html">Health Foods</a></li>
+              <li><a href="dryfruits.html">Dry Fruits</a></li>           
+            </ul>
+          </li>
+          <li><a href="blogs.html">Blog</a></li>       
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>       
+          <li><a href="buy-now.html"><i class="fas fa-shopping-bag"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
 
     <section id="hero">
       <div class="layer"></div>
@@ -94,7 +84,7 @@
           <h4>Jaggery</h4>
         </div>
         <div class="product-images">
-          <a href="#"><img src="./images/Flours2.webp" alt="" /></a>
+          <a href="#"><img src="./images/flours.jpg" alt="" /></a>
           <h4>Flours</h4>
         </div>
         <div class="product-images">
@@ -106,7 +96,7 @@
           <h4>Dates</h4>
         </div>
         <div class="product-images">
-          <a href="#"><img src="./images/rice3.jpg" alt="" /></a>
+          <a href="#"><img src="./images/mablasamba.jpg" alt="" /></a>
           <h4>Rice</h4>
         </div>
         <div class="product-images">
@@ -127,7 +117,7 @@
         </div>
         <div class="source-desc">
           <div class="img-head">
-            <img src="./images/chemical.jpg" alt="" />
+            <img src="./images/nutrition.jpg" alt="" />
             <p>Organic foods preserve far more natural vitamins and minerals</p>
           </div>
         </div>
@@ -240,7 +230,7 @@
           <h4>Health Mix</h4>
         </div>
         <div class="dish-details">
-          <img src="images/oil10.jpg" />
+          <img src="images/FRIED ITEMS.jpg" />
           <h4>Oil Fried Items</h4>
         </div>
         <div class="dish-details">
@@ -253,6 +243,24 @@
         </div>
       </div>
       <button><a href="recipes.html">View all</a></button>
+    </section>
+
+    <section id="newsletter"">
+      <div class="text-news">
+        <h2>Sign Up for Newsletters</h2>
+        <h4>
+          Get E-mail updates about our latest shop and
+          <span>Special Offer</span>
+        </h4>
+      </div>
+      <div class="form">
+        <input
+          type="text"
+          class="placeholder"
+          placeholder="your email address"
+        />
+        <button class="signup">Sign Up</button>
+      </div>
     </section>
 
     <section id="feature" class="section-p1">
@@ -282,23 +290,7 @@
       </div>
     </section>
 
-    <section id="newsletter"">
-      <div class="text-news">
-        <h2>Sign Up for Newsletters</h2>
-        <h4>
-          Get E-mail updates about our latest shop and
-          <span>Special Offer</span>
-        </h4>
-      </div>
-      <div class="form">
-        <input
-          type="text"
-          class="placeholder"
-          placeholder="your email address"
-        />
-        <button class="signup">Sign Up</button>
-      </div>
-    </section>
+    
 
     <section id="footer">
       <div class="product-list">
@@ -370,9 +362,11 @@
 
 
 
-      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/arrow.webp" alt=""></button>
 
 
+
+    <script src="js/jquery.js"></script>  
 
 
 
